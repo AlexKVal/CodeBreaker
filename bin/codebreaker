@@ -8,7 +8,7 @@ def generate_secret_code
 end
 
 game = Codebreaker::Game.new(STDOUT)
-secret_code = generate_secret_code
+secret_code = gets #generate_secret_code
 at_exit { puts "\n***\nThe secret code was: #{secret_code}\n***" }
 game.start(secret_code)
 while guess = gets.chomp
